@@ -5,12 +5,12 @@ export type Gift = {
 	variantId: number;
 };
 
-export type Promo = {
+export type Promotion = {
 	promoPrice: number;
 	gift: Gift;
 };
 
-export async function getPromo(_: Store): Promise<Promo> {
+export async function getPromo(_: Store): Promise<Promotion> {
 	// mock api call
 	return Promise.resolve({
 		promoPrice: 200,
