@@ -1,6 +1,6 @@
 import { Box, Text } from "@tiendanube/nube-sdk-jsx";
 import { styled } from "@tiendanube/nube-sdk-ui";
-import { formatCurrency } from "../utils";
+import { formatCurrency } from "./utils";
 
 const Container = styled(Box)`
 	background: #f8fafc;
@@ -55,6 +55,15 @@ export type BannerProps = {
 	promoPrice: number;
 };
 
+/**
+ * Banner de promoção.
+ *
+ * @description
+ * Exibe o banner de promoção no topo da página, utiliza styled components para estilização.
+ *
+ * @param promoPrice - O preço mínimo do carrinho para ganhar o brinde.
+ * @returns void
+ */
 export function Banner({ promoPrice }: BannerProps) {
 	const title = `Compre acima de ${formatCurrency(promoPrice)} e ganhe um brinde especial`;
 	return (

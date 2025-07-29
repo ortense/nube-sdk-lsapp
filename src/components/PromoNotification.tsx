@@ -1,11 +1,22 @@
 import { Toast } from "@tiendanube/nube-sdk-jsx";
-import { formatCurrency } from "../utils";
+import { formatCurrency } from "./utils";
 
 export type PromoNotificationProps = {
 	promoPrice: number;
 	cartSubtotal: number;
 };
 
+/**
+ * Notificação de promoção.
+ *
+ * @description
+ * Exibe a notificação de promoção com a cor padrão do tema da loja para mensagens de alerta.
+ * Calcula o valor faltante para atingir o valor mínimo do carrinho para ganhar o brinde.
+ *
+ * @param promoPrice - O preço mínimo do carrinho para ganhar o brinde.
+ * @param cartSubtotal - O subtotal do carrinho.
+ * @returns void
+ */
 export function PromoNotification({
 	promoPrice,
 	cartSubtotal,
